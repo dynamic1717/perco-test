@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  transition: all 0.15s ease-in-out;
+}
+button:active {
+  transform: scale(0.98);
+}
+
+.container {
+  width: 1140px;
+  display: block;
+  margin: 0 auto;
+}
+
+.images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.images__img {
+  margin: 0 0.3rem 0 0.3rem;
+}
+
+.images__img img {
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__content {
+  padding: 15px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.image-modal {
+  display: flex;
+}
+
+.image-modal__image {
+  height: 750px;
+  margin-right: 0.5rem;
+}
+
+.image-modal__image img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.image-modal__social {
+  width: 260px;
+  display: grid;
+  grid-template-rows: 30px 15px 30px 1fr;
+}
+
+.image-modal__social hr {
+  width: 100%;
+}
+
+.image-modal__btn-like {
+  background-color: transparent;
+  border: 1px solid grey;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  cursor: pointer;
+  fill: #bbb;
+  padding: 8px;
+}
+.image-modal__btn-like svg {
+  margin-right: 3px;
+}
+.image-modal__btn-like_active {
+  fill: red;
+}
+.image-modal__btn-like:hover {
+  transform: scale(1.03);
+}
+
+.image-modal__send-message-form {
+  display: flex;
+}
+
+.image-modal__send-message-form button {
+  flex-grow: 1;
+  background-color: transparent;
+  border: 1px solid grey;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: none;
+  cursor: pointer;
+}
+
+.image-modal__comments {
+  margin-top: 0.5rem;
+  overflow: auto;
+}
+
+.image-modal__single-comment {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.image-modal__single-comment span {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.image-modal__single-comment p {
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+  overflow-wrap: break-word;
+}
